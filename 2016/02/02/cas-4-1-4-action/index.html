@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>cas 4.1.4单点登录实战 | 何处惹尘埃</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用工具maven-3.3.9cas-4.1.4Tomcat-7.0.57-win-x64cas-sample-Java-webapp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cas 4.1.4单点登录实战">
+<meta property="og:url" content="http://chenhai.me/2016/02/02/cas-4-1-4-action/index.html">
+<meta property="og:site_name" content="何处惹尘埃">
+<meta property="og:description" content="使用工具maven-3.3.9cas-4.1.4Tomcat-7.0.57-win-x64cas-sample-Java-webapp">
+<meta property="og:updated_time" content="2016-06-12T14:18:51.743Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cas 4.1.4单点登录实战">
+<meta name="twitter:description" content="使用工具maven-3.3.9cas-4.1.4Tomcat-7.0.57-win-x64cas-sample-Java-webapp">
+  
+    <link rel="alternative" href="/atom.xml" title="何处惹尘埃" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">secsea</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CAS/" style="font-size: 10px;">CAS</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">secsea</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">secsea</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-cas-4-1-4-action" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/02/cas-4-1-4-action/" class="article-date">
+  	<time datetime="2016-02-02T05:44:03.000Z" itemprop="datePublished">2016-02-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      cas 4.1.4单点登录实战
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CAS/">CAS</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h2><p>maven-3.3.9<br>cas-4.1.4<br>Tomcat-7.0.57-win-x64<br>cas-sample-Java-webapp<br><a id="more"></a></p>
+<h2 id="一、Hello-cas"><a href="#一、Hello-cas" class="headerlink" title="一、Hello cas"></a>一、Hello cas</h2><p>1、下载Tomcat，解压；修改其server.xml，增加对SSL支持（具体百度）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector SSLEnabled=&quot;true&quot; acceptCount=&quot;100&quot; clientAuth=&quot;false&quot;  </span><br><span class="line">    disableUploadTimeout=&quot;true&quot; enableLookups=&quot;false&quot; maxThreads=&quot;25&quot;  </span><br><span class="line">    port=&quot;8443&quot; keystoreFile=&quot;G:/work/xxx/tomcat.keystore&quot; keystorePass=&quot;YOUR PASSWORD HERE&quot;  </span><br><span class="line">    protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot; scheme=&quot;https&quot;  </span><br><span class="line">    secure=&quot;true&quot; sslProtocol=&quot;TLS&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>1、从<a href="https://github.com/Jasig/cas/releases" target="_blank" rel="external">https://github.com/Jasig/cas/releases</a> 下载cas-server对应的版本；<br>2、解压，使用maven命令mvn package对cas进行编译打包，这里可能会出现2个问题：<br>　　a.单元测试不通过==》尝试加上-Dmaven.test.skip=true跳过；<br>　　b.编译到一半编译不过==》进入cas-server-core，执行命令mvn install -Dmaven.test.skip=true先将core编译为jar包后，再进行。<br>3、将打包好的cas-server-webapp下的war包复制到tomcat下，运行tomcat先试试吧；<br>4、使用账号casuser，密码Mellon登录，成功<br>5、从<a href="https://github.com/Jasig/java-cas-client" target="_blank" rel="external">https://github.com/Jasig/java-cas-client</a> 下载java-cas-client，如上步骤解压编译，编译后不再操作，待用。<br>6、从<a href="https://github.com/UniconLabs/cas-sample-java-webapp" target="_blank" rel="external">https://github.com/UniconLabs/cas-sample-java-webapp</a> 下载cas-sample-java-webapp，如上步骤解压编译，编译后不再操作，待用。</p>
+<h2 id="二、server配置数据库连接认证"><a href="#二、server配置数据库连接认证" class="headerlink" title="二、server配置数据库连接认证"></a>二、server配置数据库连接认证</h2><p> 　　上面我们采用的是默认配置，登录账号实际上是在cas/WEB-INF/deployerConfigContext.xml配置写死的。当然不符合我们大多数的实际使用场景。现在我们将其改为连接MySQL数据库验证。<br>1、回到我们刚刚maven编译的cas目录下，将cas-server-support-jdbc/target/cas-server-support-jdbc-4.1.4.jar 复制到tomcat/webapp/cas/WEB-INF/lib下，再复制mysql-connector-java-5.0.8-bin.jar到tomcat/webapp/cas/WEB-INF/lib下。当然这些你可以在cas-server-webapp下的pom.xml进行依赖添加再进行打包编译。<br>2、修改cas/WEB-INF/deployerConfigContext.xml，这里需要注意修改以下地方：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;primaryAuthenticationHandler&quot;  </span><br><span class="line">         class=&quot;org.jasig.cas.authentication.AcceptUsersAuthenticationHandler&quot;&gt;  </span><br><span class="line">       &lt;property name=&quot;users&quot;&gt;  </span><br><span class="line">           &lt;map&gt;  </span><br><span class="line">               &lt;entry key=&quot;casuser&quot; value=&quot;Mellon&quot;/&gt;  </span><br><span class="line">           &lt;/map&gt;  </span><br><span class="line">       &lt;/property&gt;  </span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
+<p>注释以上代码，增加如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;dataSource&quot;  </span><br><span class="line">    class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;  </span><br><span class="line">    &lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;  </span><br><span class="line">    &lt;property name=&quot;url&quot;  </span><br><span class="line">        value=&quot;jdbc:mysql://10.3.64.87:3306/cas?characterEncoding=utf-8&amp;autoReconnect=true&quot; /&gt;  </span><br><span class="line">    &lt;property name=&quot;username&quot; value=&quot;root&quot; /&gt;  </span><br><span class="line">    &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;  </span><br><span class="line">&lt;/bean&gt;  </span><br><span class="line"></span><br><span class="line">&lt;bean id=&quot;primaryAuthenticationHandler&quot;  </span><br><span class="line">      class=&quot;org.jasig.cas.adaptors.jdbc.QueryDatabaseAuthenticationHandler&quot;  </span><br><span class="line">      p:dataSource-ref=&quot;dataSource&quot;  </span><br><span class="line">      p:passwordEncoder-ref=&quot;MD5PasswordEncoder&quot;  </span><br><span class="line">      p:sql=&quot;select password from user_info where user_name=?&quot; /&gt;  </span><br><span class="line">        </span><br><span class="line">&lt;bean id=&quot;MD5PasswordEncoder&quot; class=&quot;org.jasig.cas.authentication.handler.DefaultPasswordEncoder&quot;&gt;  </span><br><span class="line">    &lt;constructor-arg index=&quot;0&quot;&gt;  </span><br><span class="line">        &lt;value&gt;MD5&lt;/value&gt;  </span><br><span class="line">    &lt;/constructor-arg&gt;  </span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这里我们增加了MySQL的数据连接dataSource，并编写了SQL查询用户认证信息。<br>修改完成，我们来测试一下能否通过MySQL进行认证。启动tomcat。</p>
+<p> 登录成功，我们已经成功和MYSQL连接成功了。</p>
+<h2 id="三、添加客户端"><a href="#三、添加客户端" class="headerlink" title="三、添加客户端"></a>三、添加客户端</h2><p>　　这里我们将用到第一步里面待用的cas-sample-java-webapp。<br>1、将编译好的cas-sample-java-webapp/target/cas-sample-java-webapp.war部署到tomcat下；<br>2、找到tomcat/webapp/cas-sample-java-webapp/WEB-INF/web.xml，删除以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;init-param&gt;  </span><br><span class="line">    &lt;param-name&gt;redirectAfterValidation&lt;/param-name&gt;  </span><br><span class="line">    &lt;param-value&gt;true&lt;/param-value&gt;  </span><br><span class="line">&lt;/init-param&gt;  </span><br><span class="line">&lt;init-param&gt;  </span><br><span class="line">    &lt;param-name&gt;useSession&lt;/param-name&gt;  </span><br><span class="line">    &lt;param-value&gt;true&lt;/param-value&gt;  </span><br><span class="line">&lt;/init-param&gt;  </span><br><span class="line">&lt;init-param&gt;  </span><br><span class="line">    &lt;param-name&gt;acceptAnyProxy&lt;/param-name&gt;  </span><br><span class="line">    &lt;param-value&gt;true&lt;/param-value&gt;  </span><br><span class="line">&lt;/init-param&gt;  </span><br><span class="line">&lt;init-param&gt;  </span><br><span class="line">    &lt;param-name&gt;proxyReceptorUrl&lt;/param-name&gt;  </span><br><span class="line">    &lt;param-value&gt;/client/proxyUrl&lt;/param-value&gt;  </span><br><span class="line">&lt;/init-param&gt;  </span><br><span class="line">&lt;init-param&gt;  </span><br><span class="line">    &lt;param-name&gt;proxyCallbackUrl&lt;/param-name&gt;  </span><br><span class="line">    &lt;param-value&gt;https://zhuajindian.com:8443/client/proxyUrl&lt;/param-value&gt;  </span><br><span class="line">&lt;/init-param&gt;</span><br></pre></td></tr></table></figure></p>
+<p>将其中的多个casServerUrlPrefix、serverName、casServerLoginUrl替换成你自己的URL。<br>3、修改deployerConfigContext.xml，找到下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;serviceRegistryDao&quot; class=&quot;org.jasig.cas.services.JsonServiceRegistryDao&quot;  </span><br><span class="line">      c:configDirectory=&quot;$&#123;service.registry.config.location:classpath:services&#125;&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>替换为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 注册服务 --&gt;  </span><br><span class="line">&lt;bean id=&quot;serviceRegistryDao&quot; class=&quot;org.jasig.cas.services.InMemoryServiceRegistryDaoImpl&quot;  </span><br><span class="line">        p:registeredServices-ref=&quot;registeredServicesList&quot; /&gt;  </span><br><span class="line">  </span><br><span class="line">&lt;util:list id=&quot;registeredServicesList&quot;&gt;  </span><br><span class="line">    &lt;bean class=&quot;org.jasig.cas.services.RegexRegisteredService&quot;  </span><br><span class="line">          p:id=&quot;0&quot; p:name=&quot;HTTP and IMAP&quot; p:description=&quot;Allows HTTP(S) and IMAP(S) protocols&quot;  </span><br><span class="line">          p:serviceId=&quot;^(https?|http?|imaps?)://.*&quot; p:evaluationOrder=&quot;10000001&quot; /&gt;  </span><br><span class="line">&lt;/util:list&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这里的serviceId就是你告诉cas服务器端，通过这个正则来判断，符合这个正则表达式的，就是我们自己的客户端。当然这里泛匹配了，你可以根据实际情况来。<br>4、重启tomcat，访问刚刚填写在serverName处的URL试试</p>
+<p>可以看到，我们已经能够成功获取到Authenticated UserId，也就是登录的用户名。这样，我们的简单demo就完成了。</p>
+<h2 id="四、自定义登录后的可传递字段，方便客户端读取"><a href="#四、自定义登录后的可传递字段，方便客户端读取" class="headerlink" title="四、自定义登录后的可传递字段，方便客户端读取"></a>四、自定义登录后的可传递字段，方便客户端读取</h2><p>　　在我们的应用场景中，客户端需要的参数不仅仅是用户名。还需要诸如userid等各类信息，那么，接下来我们就来配置获取自定义字段。<br>1、找到cas/WEB-INF/deployerConfigContext.xml，注释以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;attributeRepository&quot; class=&quot;org.jasig.services.persondir.support.NamedStubPersonAttributeDao&quot;  </span><br><span class="line">         p:backingMap-ref=&quot;attrRepoBackingMap&quot; /&gt;  </span><br><span class="line"> </span><br><span class="line">   &lt;util:map id=&quot;attrRepoBackingMap&quot;&gt;  </span><br><span class="line">       &lt;entry key=&quot;uid&quot; value=&quot;uid&quot; /&gt;  </span><br><span class="line">       &lt;entry key=&quot;eduPersonAffiliation&quot; value=&quot;eduPersonAffiliation&quot; /&gt;  </span><br><span class="line">       &lt;entry key=&quot;groupMembership&quot; value=&quot;groupMembership&quot; /&gt;  </span><br><span class="line">       &lt;entry&gt;  </span><br><span class="line">           &lt;key&gt;&lt;value&gt;memberOf&lt;/value&gt;&lt;/key&gt;  </span><br><span class="line">           &lt;list&gt;  </span><br><span class="line">               &lt;value&gt;faculty&lt;/value&gt;  </span><br><span class="line">               &lt;value&gt;staff&lt;/value&gt;  </span><br><span class="line">               &lt;value&gt;org&lt;/value&gt;  </span><br><span class="line">           &lt;/list&gt;  </span><br><span class="line">       &lt;/entry&gt;  </span><br><span class="line">   &lt;/util:map&gt;</span><br></pre></td></tr></table></figure></p>
+<p>替换为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;attributeRepository&quot; class=&quot;org.jasig.services.persondir.support.jdbc.SingleRowJdbcPersonAttributeDao&quot;&gt;  </span><br><span class="line">	&lt;constructor-arg index=&quot;0&quot; ref=&quot;dataSource&quot; /&gt;  </span><br><span class="line">	&lt;constructor-arg index=&quot;1&quot; value=&quot;SELECT id,user_name,mobile,cid FROM user_info WHERE &#123;0&#125;&quot; /&gt;  </span><br><span class="line">		&lt;property name=&quot;queryAttributeMapping&quot;&gt;  </span><br><span class="line">			&lt;map&gt;  </span><br><span class="line">				&lt;entry key=&quot;username&quot; value=&quot;user_name&quot; /&gt;  </span><br><span class="line">			&lt;/map&gt;  </span><br><span class="line">		&lt;/property&gt;  </span><br><span class="line">		&lt;property name=&quot;resultAttributeMapping&quot;&gt;  </span><br><span class="line">			&lt;map&gt;  </span><br><span class="line">				&lt;entry key=&quot;id&quot; value=&quot;userId&quot; /&gt;  </span><br><span class="line">				&lt;entry key=&quot;user_name&quot; value=&quot;username&quot; /&gt;  </span><br><span class="line">				&lt;entry key=&quot;mobile&quot; value=&quot;mobile&quot; /&gt;  </span><br><span class="line">				&lt;entry key=&quot;cid&quot; value=&quot;cid&quot; /&gt;  </span><br><span class="line">			&lt;/map&gt;  </span><br><span class="line">		&lt;/property&gt;  </span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
+<p>其中的sql只需要写前半部分，如示例，entry的key代表上面sql查询的字段，value代表服务端传给客户端的参数名，客户端可以通过value取出对应的值。<br>2、修改cas/WEB-INF/view/jsp/protocol/2.0/casServiceValidationSuccess.jsp，增加下面这段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;cas:serviceResponse xmlns:cas=&apos;http://www.yale.edu/tp/cas&apos;&gt;  </span><br><span class="line">    &lt;cas:authenticationSuccess&gt;  </span><br><span class="line">        &lt;cas:user&gt;$&#123;fn:escapeXml(principal.id)&#125;&lt;/cas:user&gt;  </span><br><span class="line">        &lt;!-- 这段 --&gt;  </span><br><span class="line">        &lt;c:if test=&quot;$&#123;fn:length(assertion.chainedAuthentications[fn:length(assertion.chainedAuthentications)-1].principal.attributes) &gt; 0&#125;&quot;&gt;  </span><br><span class="line">            &lt;cas:attributes&gt;  </span><br><span class="line">                &lt;c:forEach var=&quot;attr&quot; items=&quot;$&#123;assertion.chainedAuthentications[fn:length(assertion.chainedAuthentications)-1].principal.attributes&#125;&quot;&gt;  </span><br><span class="line">                    &lt;cas:$&#123;fn:escapeXml(attr.key)&#125;&gt;$&#123;fn:escapeXml(attr.value)&#125;&lt;/cas:$&#123;fn:escapeXml(attr.key)&#125;&gt;  </span><br><span class="line">                &lt;/c:forEach&gt;  </span><br><span class="line">            &lt;/cas:attributes&gt;  </span><br><span class="line">        &lt;/c:if&gt;  </span><br><span class="line">        &lt;!-- 这段 end--&gt;  </span><br><span class="line">        &lt;c:if test=&quot;$&#123;not empty pgtIou&#125;&quot;&gt;  </span><br><span class="line">            &lt;cas:proxyGrantingTicket&gt;$&#123;pgtIou&#125;&lt;/cas:proxyGrantingTicket&gt;  </span><br><span class="line">        &lt;/c:if&gt;  </span><br><span class="line">        &lt;c:if test=&quot;$&#123;fn:length(chainedAuthentications) &gt; 0&#125;&quot;&gt;  </span><br><span class="line">            &lt;cas:proxies&gt;  </span><br><span class="line">                &lt;c:forEach var=&quot;proxy&quot; items=&quot;$&#123;chainedAuthentications&#125;&quot; varStatus=&quot;loopStatus&quot; begin=&quot;0&quot; end=&quot;$&#123;fn:length(chainedAuthentications)&#125;&quot; step=&quot;1&quot;&gt;  </span><br><span class="line">                    &lt;cas:proxy&gt;$&#123;fn:escapeXml(proxy.principal.id)&#125;&lt;/cas:proxy&gt;  </span><br><span class="line">                &lt;/c:forEach&gt;  </span><br><span class="line">            &lt;/cas:proxies&gt;  </span><br><span class="line">        &lt;/c:if&gt;  </span><br><span class="line">    &lt;/cas:authenticationSuccess&gt;  </span><br><span class="line">&lt;/cas:serviceResponse&gt;</span><br></pre></td></tr></table></figure></p>
+<p>3、重启tomcat，登录看效果：</p>
+<p>上面配置的4个参数这里显示了3个，原来mobile字段是因为没有值，所以他默认就不传递了。</p>
+<h2 id="五、单点退出"><a href="#五、单点退出" class="headerlink" title="五、单点退出"></a>五、单点退出</h2><p>单点登出在应用中是必不可少的，只需要在client的web.xml顶部加上以下代码即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--该过滤器用于实现单点登出功能，可选配置。 --&gt;  </span><br><span class="line">&lt;filter&gt;  </span><br><span class="line">    &lt;filter-name&gt;CASSingle Sign OutFilter&lt;/filter-name&gt;  </span><br><span class="line">    &lt;filter-class&gt;org.jasig.cas.client.session.SingleSignOutFilter&lt;/filter-class&gt;  </span><br><span class="line">    &lt;init-param&gt;  </span><br><span class="line">        &lt;param-name&gt;casServerUrlPrefix&lt;/param-name&gt;  </span><br><span class="line">        &lt;param-value&gt;https://zhuajindian.com:8443/cas&lt;/param-value&gt;  </span><br><span class="line">    &lt;/init-param&gt;  </span><br><span class="line">&lt;/filter&gt;  </span><br><span class="line">&lt;filter-mapping&gt;  </span><br><span class="line">    &lt;filter-name&gt;CASSingle Sign OutFilter&lt;/filter-name&gt;  </span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;  </span><br><span class="line">&lt;/filter-mapping&gt;  </span><br><span class="line">&lt;!--用于单点退出，该过滤器用于实现单点登出功能，可选配置 --&gt;  </span><br><span class="line">&lt;listener&gt;  </span><br><span class="line">    &lt;listener-class&gt;org.jasig.cas.client.session.SingleSignOutHttpSessionListener&lt;/listener-class&gt;  </span><br><span class="line">&lt;/listener&gt;</span><br></pre></td></tr></table></figure></p>
+<p>注意单点登出在测试时，访问<a href="https://zhuajindian.com:8443/cas/logout登出后直接刷新client端，是没有退出的，需要在客户端有其他请求后才会通知退出，这个不知道是什么原因引起的。盼交流回复" target="_blank" rel="external">https://zhuajindian.com:8443/cas/logout登出后直接刷新client端，是没有退出的，需要在客户端有其他请求后才会通知退出，这个不知道是什么原因引起的。盼交流回复</a></p>
+<p>本文搭建的CAS4.1.4server+client实例下载地址：<a href="http://download.csdn.net/detail/chenhai201/9425625" target="_blank" rel="external">http://download.csdn.net/detail/chenhai201/9425625</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/19/cas-user-defined-controller/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          CAS server 4.1.4自定义Controller
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="cas-4-1-4-action" data-title="cas 4.1.4单点登录实战" data-url="http://chenhai.me/2016/02/02/cas-4-1-4-action/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 secsea
+    	</div>
+      	<div class="footer-right">
+      		Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
