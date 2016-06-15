@@ -70,7 +70,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -172,6 +172,64 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-activiti-study" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/15/activiti-study/" class="article-date">
+  	<time datetime="2016-06-15T11:03:11.000Z" itemprop="datePublished">2016-06-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/15/activiti-study/">activiti study</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="activiti-流程小结"><a href="#activiti-流程小结" class="headerlink" title="activiti 流程小结"></a>activiti 流程小结</h1><h2 id="1、创建流程图"><a href="#1、创建流程图" class="headerlink" title="1、创建流程图"></a>1、创建流程图</h2><p>通过Eclipse插件、手动编写XML等方式创建。</p>
+<h2 id="2、上传流程图"><a href="#2、上传流程图" class="headerlink" title="2、上传流程图"></a>2、上传流程图</h2><p>创建仓库（Repository）来保存流程图<br>流程引擎（ProcessEnginer） （通过流程引擎配置创建而来）</p>
+<h2 id="3、部署流程图"><a href="#3、部署流程图" class="headerlink" title="3、部署流程图"></a>3、部署流程图</h2><p>RepositoryService加载流程图，然后部署流程图</p>
+<h2 id="4、启动流程"><a href="#4、启动流程" class="headerlink" title="4、启动流程"></a>4、启动流程</h2><p>Person p = new Person();//创建一个person类对象<br>ProcessInstance //流程实例<br>Runtime //通过运行时服务（RuntimeService）得到流程实例</p>
+<h2 id="5、处理流程任务"><a href="#5、处理流程任务" class="headerlink" title="5、处理流程任务"></a>5、处理流程任务</h2><p>任务Task，通过任务服务（TaskService）检索待处理的任务，然后handle task</p>
+<p>流程引擎配置ProcessEngineConfiguration<br>流程引擎ProcessEngine<br>仓库服务RepositoryService<br>运行服务RuntimeService<br>流程实例ProcessInstance<br>任务服务TaskService</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-cas-user-defined-controller" class="article article-type-post" itemscope itemprop="blogPost">
   
