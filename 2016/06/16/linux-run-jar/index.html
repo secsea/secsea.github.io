@@ -4,27 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>activiti study | 何处惹尘埃</title>
+  <title>Linux 下运行jar包注意事项 | 何处惹尘埃</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="activiti 流程小结1、创建流程图通过Eclipse插件、手动编写XML等方式创建。
-2、上传流程图创建仓库（Repository）来保存流程图流程引擎（ProcessEnginer） （通过流程引擎配置创建而来）
-3、部署流程图RepositoryService加载流程图，然后部署流程图
-4、启动流程Person p = new Person();//创建一个person类对象Proces">
+  <meta name="description" content="当我们把Jar包拷贝到Linux服务器上运行时，由于没有Windows那样的可视化打印控制台，一旦我们在关闭了putty等连接终端后，在调试方面就不好查看输出内容了。那么，如何在Linux里查看运行中的jar控制台输出呢">
 <meta property="og:type" content="article">
-<meta property="og:title" content="activiti study">
-<meta property="og:url" content="http://chenhai.me/2016/06/15/activiti-study/index.html">
+<meta property="og:title" content="Linux 下运行jar包注意事项">
+<meta property="og:url" content="http://chenhai.me/2016/06/16/linux-run-jar/index.html">
 <meta property="og:site_name" content="何处惹尘埃">
-<meta property="og:description" content="activiti 流程小结1、创建流程图通过Eclipse插件、手动编写XML等方式创建。
-2、上传流程图创建仓库（Repository）来保存流程图流程引擎（ProcessEnginer） （通过流程引擎配置创建而来）
-3、部署流程图RepositoryService加载流程图，然后部署流程图
-4、启动流程Person p = new Person();//创建一个person类对象Proces">
-<meta property="og:updated_time" content="2016-06-15T12:33:35.000Z">
+<meta property="og:description" content="当我们把Jar包拷贝到Linux服务器上运行时，由于没有Windows那样的可视化打印控制台，一旦我们在关闭了putty等连接终端后，在调试方面就不好查看输出内容了。那么，如何在Linux里查看运行中的jar控制台输出呢">
+<meta property="og:updated_time" content="2016-06-16T07:41:56.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="activiti study">
-<meta name="twitter:description" content="activiti 流程小结1、创建流程图通过Eclipse插件、手动编写XML等方式创建。
-2、上传流程图创建仓库（Repository）来保存流程图流程引擎（ProcessEnginer） （通过流程引擎配置创建而来）
-3、部署流程图RepositoryService加载流程图，然后部署流程图
-4、启动流程Person p = new Person();//创建一个person类对象Proces">
+<meta name="twitter:title" content="Linux 下运行jar包注意事项">
+<meta name="twitter:description" content="当我们把Jar包拷贝到Linux服务器上运行时，由于没有Windows那样的可视化打印控制台，一旦我们在关闭了putty等连接终端后，在调试方面就不好查看输出内容了。那么，如何在Linux里查看运行中的jar控制台输出呢">
   
     <link rel="alternative" href="/atom.xml" title="何处惹尘埃" type="application/atom+xml">
   
@@ -181,11 +172,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-activiti-study" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linux-run-jar" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/15/activiti-study/" class="article-date">
-  	<time datetime="2016-06-15T11:03:11.000Z" itemprop="datePublished">2016-06-15</time>
+      <a href="/2016/06/16/linux-run-jar/" class="article-date">
+  	<time datetime="2016-06-16T07:32:18.000Z" itemprop="datePublished">2016-06-16</time>
 </a>
     </div>
   
@@ -198,7 +189,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      activiti study
+      Linux 下运行jar包注意事项
     </h1>
   
 
@@ -206,6 +197,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux-java-jar/">linux java jar</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -214,12 +209,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="activiti-流程小结"><a href="#activiti-流程小结" class="headerlink" title="activiti 流程小结"></a>activiti 流程小结</h1><h2 id="1、创建流程图"><a href="#1、创建流程图" class="headerlink" title="1、创建流程图"></a>1、创建流程图</h2><p>通过Eclipse插件、手动编写XML等方式创建。</p>
-<h2 id="2、上传流程图"><a href="#2、上传流程图" class="headerlink" title="2、上传流程图"></a>2、上传流程图</h2><p>创建仓库（Repository）来保存流程图<br>流程引擎（ProcessEnginer） （通过流程引擎配置创建而来）</p>
-<h2 id="3、部署流程图"><a href="#3、部署流程图" class="headerlink" title="3、部署流程图"></a>3、部署流程图</h2><p>RepositoryService加载流程图，然后部署流程图</p>
-<h2 id="4、启动流程"><a href="#4、启动流程" class="headerlink" title="4、启动流程"></a>4、启动流程</h2><p>Person p = new Person();//创建一个person类对象<br>ProcessInstance //流程实例<br>Runtime //通过运行时服务（RuntimeService）得到流程实例</p>
-<h2 id="5、处理流程任务"><a href="#5、处理流程任务" class="headerlink" title="5、处理流程任务"></a>5、处理流程任务</h2><p>任务Task，通过任务服务（TaskService）检索待处理的任务，然后handle task</p>
-<p>流程引擎配置ProcessEngineConfiguration<br>流程引擎ProcessEngine<br>仓库服务RepositoryService<br>运行服务RuntimeService<br>流程实例ProcessInstance<br>任务服务TaskService</p>
+        <p>当我们把Jar包拷贝到Linux服务器上运行时，由于没有Windows那样的可视化打印控制台，一旦我们在关闭了putty等连接终端后，在调试方面就不好查看输出内容了。那么，如何在Linux里查看运行中的jar控制台输出呢<br><a id="more"></a></p>
+<h1 id="普通jar运行方式"><a href="#普通jar运行方式" class="headerlink" title="普通jar运行方式"></a>普通jar运行方式</h1><p>通过以下命令即可运行jar程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar YOURNAME.jar</span><br></pre></td></tr></table></figure></p>
+<p>运行后putty立即开始输出控制台打印，不能干其他事情了。<br>以上运行并不是在后台运行，也就是说当按Ctrl+C取消后，程序也就关闭了。</p>
+<h1 id="jar后台运行"><a href="#jar后台运行" class="headerlink" title="jar后台运行"></a>jar后台运行</h1><p>我们可以通过以下命令，运行jar程序，并且将控制台输出到jar包目录下的nohup.out文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar YOURNAME.jar &amp;</span><br></pre></td></tr></table></figure></p>
+<p>运行该命令可能会提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># nohup: ignoring input and appending output to ‘nohup.out’</span><br></pre></td></tr></table></figure></p>
+<p>此时程序已经在后台默默运行了，按Ctrl+C后，我们可以通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f nohup.out</span><br></pre></td></tr></table></figure></p>
+<p>查看控制台打印。</p>
 
       
     </div>
@@ -229,18 +225,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/16/linux-run-jar/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/06/16/linux-run-jar-1/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Linux 下运行jar包注意事项
+          linux run jar
         
       </div>
     </a>
   
   
-    <a href="/2016/02/19/cas-user-defined-controller/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CAS server 4.1.4自定义Controller</div>
+    <a href="/2016/06/15/activiti-study/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">activiti study</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -275,7 +271,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="activiti-study" data-title="activiti study" data-url="http://chenhai.me/2016/06/15/activiti-study/"></div>
+	<div class="ds-thread" data-thread-key="linux-run-jar" data-title="Linux 下运行jar包注意事项" data-url="http://chenhai.me/2016/06/16/linux-run-jar/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
